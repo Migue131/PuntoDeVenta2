@@ -48,6 +48,7 @@ public class ClienteDAO implements Serializable{
     public boolean eliminar(Cliente cliente){
         em.getTransaction().begin();
         em.remove(em.merge(cliente));
+        
         em.getTransaction().commit();
         return true;
     }
